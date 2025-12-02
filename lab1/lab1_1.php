@@ -12,9 +12,9 @@ $age = 21;
 </head>
 <body>
 	<h1>Переменные и вывод</h1>
+	Меня зовут: <?= $name ?><br>
+	Мне <?= $age ?> год<br>
 	<?php
-	echo "Меня зовут: $name<br>";
-	echo "Мне $age год<br>";
 	echo "Тип переменной \$name: " . gettype($name) . "<br>";
 	echo "Тип переменной \$age: " . gettype($age) . "<br>";
 	unset($name, $age);
