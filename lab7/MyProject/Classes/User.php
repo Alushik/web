@@ -1,45 +1,42 @@
 <?php
-declare(strict_types=1);
 
 namespace MyProject\Classes;
 
-/**
- * Класс обычного пользователя.
- */
 class User
 {
-    /** @var string Имя */
-    /** @var string Логин */
-    /** @var string Пароль */
-    public string $name;
-    public string $login;
-    private string $password;
-/**
-* Конструктор User.
-*
-* @param string $name Имя пользователя
-* @param string $login Логин
-* @param string $password Пароль
-*/
+    public $name;
+    public $login;
+    private $password;
+
+    /**
+     * Конструктор 
+     */
     public function __construct(string $name, string $login, string $password)
     {
         $this->name = $name;
         $this->login = $login;
         $this->password = $password;
+        echo "Пользователь с именем {$this->login} создан<br>";
     }
-/**
-* Вывод информации.
-*/
+
+    /**
+     * Выводит информацию о пользователе
+     */
     public function showInfo(): void
     {
-        echo "<p>Имя: {$this->name}<br>Логин: {$this->login}</p>";
+        echo "<div style='padding: 10px'>";
+        echo "<h3>Информация о пользователе:</h3>";
+        echo "<p><strong>Имя:</strong> {$this->name}</p>";
+        echo "<p><strong>Логин:</strong> {$this->login}</p>";
+        echo "<p><strong>Пароль:</strong> ******</p>";
+        echo "</div>";
     }
-/**
-* Деструктор.
-*/
+
+    /**
+     * Деструктор 
+     */
     public function __destruct()
     {
-        echo "<p>Пользователь {$this->login} удален.</p>";
+        echo "Пользователь {$this->login} удален<br>";
     }
 }
-

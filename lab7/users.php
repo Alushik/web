@@ -1,37 +1,37 @@
 <?php
+
 declare(strict_types=1);
+
+/**
+ * Автозагрузчик классов
+ */
+spl_autoload_register(function ($className) {
+    $filePath = str_replace('MyProject\\Classes\\', 'MyProject/Classes/', $className) . '.php';
+
+    if (file_exists($filePath)) {
+        require_once $filePath;
+        return true;
+    }
+    return false;
+});
 
 use MyProject\Classes\User;
 use MyProject\Classes\SuperUser;
 
-spl_autoload_register(function ($class) {
+echo "<h1>Работа с классами</h1>";
 
-    //namespace
-    $prefix = 'MyProject\\Classes\\';
+echo "<h2>Пользователи-User:</h2>";
+$user1 = new User("Павел Максимович", "lev", "password123");
+$user2 = new User("Виктор Алексеевич", "red", "password456");
+$user3 = new User("Лидия Михайловна", "kitten", "password789");
 
-    if (strpos($class, $prefix) !== 0) {
-        return;
-    }
-
-    $relativePath = str_replace($prefix, '', $class);
-
-    // Преобразуем namespace
-    $relativePath = str_replace('\\', DIRECTORY_SEPARATOR, $relativePath);
-
-    // Путь к файлам классов
-    $file = __DIR__ . '/MyProject/Classes/' . $relativePath . '.php';
-
-    if (file_exists($file)) {
-        require_once $file;
-    }
-});
-
-// Создание объектов
-$user1 = new User("Иван", "ivan123", "pass1");
-$user2 = new User("Мария", "maria456", "pass2");
-$user3 = new SuperUser("Админ", "root", "superpass", "administrator");
-
-// Вывод информации
 $user1->showInfo();
 $user2->showInfo();
 $user3->showInfo();
+
+echo "<h2>Суперпользователь-SuperUser:</h2>";
+$user = new SuperUser("Администратор", "admin", "superadmin", "администратор");
+
+$user->showInfo();
+
+echo "<p>Скрипт завершен. Объекты будут удалены автоматически.</p>";
