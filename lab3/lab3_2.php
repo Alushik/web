@@ -15,10 +15,10 @@ function DateTime(): array
     $now = time();
 
     $currentYear = (int)date('Y');
-    $birthday = mktime(13, 55, 00, 2, 21, $currentYear);
+    $birthday = mktime(13, 55, 00, 1, 4, $currentYear);
 
     if ($birthday < $now) {
-        $birthday = mktime(13, 55, 00, 2, 21, date('Y') + 1);
+        $birthday = mktime(13, 55, 00, 1, 4, date('Y') + 1);
     }
 
     $Date = getdate();
