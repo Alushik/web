@@ -8,3 +8,10 @@ php_flag display_errors On
 php_flag display_startup_errors On
 php_value error_reporting 32767
 php_value error_log /home/f1199297/domains/f1199297.xsph.ru/php_errors.log
+
+ini_set("session.use_only_cookies", "0");
+ini_set("session.use_trans_sid", "1");
+
+# Настройки PHP
+php_flag session.use_only_cookies 0
+php_flag session.use_trans_sid 1
