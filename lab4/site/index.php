@@ -75,7 +75,7 @@ switch ($id) {
 				include 'table.php';
 				break;
 			case 'calc':
-				include 'calculator.php';
+				include 'calculate.php';
 				break;
 			default:
 				include 'inc/index.inc.php';
