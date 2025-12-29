@@ -2,7 +2,7 @@
 
 $db_host = 'localhost:3306';
 $db_user = 'root';
-$db_pass = '12345678';
+$db_pass = '87654321';
 $db_name = 'lab1';
 
 function db_connect() {
