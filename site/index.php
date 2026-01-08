@@ -64,6 +64,7 @@
             font-size: 28px;
             margin-bottom: 25px;
             color: #333;
+            text-align: center;
         }
         
         .search-box {
@@ -73,6 +74,7 @@
             border: 2px solid #ddd;
             border-radius: 8px;
             margin-bottom: 15px;
+            color: #333;
         }
         
         .search-btn {
@@ -213,8 +215,11 @@
     </div>
     
     <div class="search-container">
-        <div class="search-title">Врачи, клиники, услуги...</div>
-        <input type="text" class="search-box" placeholder="Введите запрос для поиска...">
+        <!-- Заголовок можно оставить пустым или убрать совсем -->
+        <div class="search-title">Найдите врача или клинику в Орле</div>
+        
+        <!-- Поле поиска с текстом внутри -->
+        <input type="text" class="search-box" placeholder="Врачи, клиники, услуги....">
         <button class="search-btn">Поиск</button>
         <br>
         <a class="help-link" id="helpLink">Нужна помощь?</a>
