@@ -20,26 +20,30 @@
         .header {
             background-color: #2c6ca3;
             color: white;
-            padding: 20px;
-            text-align: center;
+            padding: 15px 20px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
         }
         
         .city-name {
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 5px;
+            white-space: nowrap;
         }
         
         .site-name {
             font-size: 18px;
             opacity: 0.9;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
         }
         
         .login-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
             background-color: white;
             color: #2c6ca3;
             border: none;
