@@ -215,8 +215,7 @@
     </div>
     
     <div class="search-container">
-        <!-- Заголовок можно оставить пустым или убрать совсем -->
-        <div class="search-title">Найдите врача или клинику в Орле</div>
+
         
         <!-- Поле поиска с текстом внутри -->
         <input type="text" class="search-box" placeholder="Врачи, клиники, услуги....">
