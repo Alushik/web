@@ -198,9 +198,14 @@
 </head>
 <body>
     <div class="header">
-        <button class="login-btn" onclick="window.location.href='login.php'">Войти</button>
+        <!-- Город слева -->
         <div class="city-name">Орёл</div>
+        
+        <!-- Название сайта по центру -->
         <div class="site-name">Медицинский поиск</div>
+        
+        <!-- Кнопка входа справа -->
+        <button class="login-btn" onclick="window.location.href='login.php'">Войти</button>
     </div>
     
     <div class="search-container">
